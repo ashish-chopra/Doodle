@@ -13,7 +13,7 @@ occupied. Doodles are simple drawings that can have concrete representational me
 This reason was enough to call it _Doodle_ because when this project was conceived, i was not clear about what am i gonna 
 show??? So i came with an abstract concept called "Doodle Charts".
 
-3. How to get it?
+How to get it?
 ===================
 Well, it's pretty straight-forward. 
 
@@ -23,7 +23,7 @@ Running the code is as simple as downloading but don't forget to read next secti
 Just run the ` build.xml ` in eclipse and it is deployed in your web-server.  
 Turn-on your server & fire the URL in browser to see it in ACTION!!!  
 
-What do i need?
+What do I need?
 ==================
 So to run it you need 
    1. Tomcat 6.0 (at ` C:\tomcat ` - as i used in compilation scripts)
