@@ -13,6 +13,12 @@ occupied. Doodles are simple drawings that can have concrete representational me
 This reason was enough to call it _Doodle_ because when this project was conceived, i was not clear about what am i gonna 
 show??? So i came with an abstract concept called "Doodle Charts".
 
+Development
+==============
+Doodle is currently under development. Please find more information on [Wiki](https://github.com/ashish-chopra/Doodle/wiki).
+An active roadmap is also published on wiki along with some other worth reading reports and articles giving more insight into 
+Doodle.
+
 How to get it?
 ===================
 Well, it's pretty straight-forward. 

@@ -32,7 +32,7 @@ public abstract class Profile {
 	 * @return <code>true</code> if profiling is on,
 	 *         <code>false</code> otherwise.
 	 */
-	public boolean isProfileEnabled() {
+	public boolean isProfileOn() {
 		return false;
 	}
 	
@@ -41,7 +41,7 @@ public abstract class Profile {
 	 * @param flag <code>true</code> if set to on, <code>false</code>
 	 * 			   otherwise.
 	 */
-	public void setProfiling(boolean flag) {
+	public void setProfile(boolean flag) {
 		
 	}
 	
