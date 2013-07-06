@@ -1,0 +1,85 @@
+/*
+ File: default.css
+ Author: Ashish Chopra
+ Date: 24 June, 2013
+ -----------------------------------
+ Default CSS styles for basic doodle 
+ designed for Doodle v1.0
+
+*/
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+body {
+	font-family: "Roboto", Helvetica, sans-serif;
+ 	font-size: 100%;
+ 	color: #404040;
+ 	background: rgba(0,0,0,0.1);
+
+}
+
+#main-frame {
+	margin: 0 auto;
+	width: 60%;
+}
+
+#primary-header {
+	position: relative;
+	margin-top: 20px;
+	border-bottom: 4px solid #f7837b; /*#2b8dc0;*/
+	border-top:0;
+}
+
+#primary-header h1 {
+	font-size: 56px;
+	font-family: "Ruda", sans-serif;
+	width: 250px;
+}
+
+#doodle-info-section {
+	margin-top: 20px;
+	padding: 20px;
+	line-height: 20px;
+	font-size: 13px;
+	text-align: justify;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	-webkit-box-shadow:1px 1px 1px rgba(0, 0, 0, .1);
+	-moz-box-shadow:1px 1px 1px rgba(0, 0, 0, .1);
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+}
+
+#doodle-chart-section {
+	margin-top: 20px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	-webkit-box-shadow:1px 1px 1px rgba(0, 0, 0, .1);
+	-moz-box-shadow:1px 1px 1px rgba(0, 0, 0, .1);
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+}
+
+.ds-heading {
+	font-size: 20px;
+	line-height: 40px;
+	border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+.ds-info {
+	margin-top: 10px;
+}
+
+.doodle-version {
+	position: absolute;
+	top: 0;
+	left: 190px;
+	font-size: 20px;
+	color: #53a93f;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+}
+
+.header-img {
+
+}

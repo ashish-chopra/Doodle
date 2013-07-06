@@ -1,0 +1,104 @@
+<?xml version="1.0" ?>
+<project name="Doodle - A no sense Art" default="deploy-webapp" basedir=".">
+	<property file="build.properties" />
+	<property name="app.name"          value="Doodle" />
+	<property name="app.path"          value="/${app.name}" />
+	<property name="app.version"       value="0.1-dev" />
+	<property name="build.home"        value="${basedir}/build" />
+	<property name="dist.home"         value="${basedir}/dist" />
+	<property name="docs.home"         value="${basedir}/docs" />
+	<property name="src.home"          value="${basedir}/src" />
+	<property name="web.home"          value="${basedir}/WebContent" />
+	<property name="lib.home"          value="${web.home}/WEB-INF/lib" />
+	<property name="deploy-webapp.dir" value="${deploy.dir}/${app.name}" />
+
+	<path id="lib">
+		<fileset dir="${lib.home}">
+			<include name="*.jar" />
+		</fileset>
+		<fileset dir="${catalina.lib}">
+			<include name="*.jar" />
+		</fileset>
+	</path>
+
+	<!-- ==================== All Target ====================================== -->
+
+	<!--
+
+	  The "all" target is a shortcut for running the "clean" target followed
+	  by the "compile" target, to force a complete recompile.
+
+	-->
+
+	<target name="all" depends="clean,compile"
+	   description="Clean build and dist directories, then compile"/>
+
+
+	<!-- ==================== Clean Target ==================================== -->
+
+	<!--
+
+	  The "clean" target deletes any previous "build" and "dist" directory,
+	  so that you can be ensured the application can be built from scratch.
+
+	-->
+
+	<target name="clean"
+	   description="Delete old build and dist directories">
+		<delete dir="${build.home}"/>
+		<delete dir="${dist.home}"/>
+	</target>
+
+	<!-- ==================== Compile Target ================================== -->
+
+	<!--
+
+	  The "compile" target transforms source files (from your "src" directory)
+	  into object files in the appropriate location in the build directory.
+	  
+	-->
+
+	<target name="compile"
+	   description="Compile Java sources">
+		<!-- Compile Java classes as necessary -->
+		<mkdir    dir="${build.home}"/>
+		<javac srcdir="${src.home}"
+	          destdir="${build.home}"
+			includeantruntime="false"
+	            debug="on"
+	      deprecation="on"
+	       classpathref="lib" />
+		<!-- Copy application resources -->
+		<copy  todir="${build.home}">
+			<fileset dir="${src.home}" excludes="**/*.java"/>
+		</copy>
+	</target>
+
+<!-- ==================== Deploy Webapp Target ================================== 
+
+    This example assumes that you will be including your classes in an
+	  unpacked directory hierarchy under "/WEB-INF/classes".
+-->
+	<target name="deploy-webapp" depends="compile" description="deploy webapp on application as directory">
+		<mkdir dir="${deploy-webapp.dir}"/>
+		<copy todir="${deploy-webapp.dir}">
+			<fileset dir="${web.home}"  />
+		</copy>
+		<mkdir dir="${deploy-webapp.dir}/WEB-INF/classes"/>
+		<copy todir="${deploy-webapp.dir}/WEB-INF/classes">
+			<fileset dir="${build.home}" />
+		</copy>
+	</target>
+
+	<!-- ==================== Create Target ================================== -->
+
+	<target name="create" depends="compile">
+		<war destfile="${app.name}.war" webxml="WebContent/WEB-INF/web.xml" update="true">
+		<classes dir="build\classes"/>
+		
+		<fileset dir="WebContent">
+		<exclude name="WEB-INF/web.xml"/>
+		</fileset>
+		</war>
+	</target>
+</project>
