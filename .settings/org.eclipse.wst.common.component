@@ -3,6 +3,7 @@
     <wb-module deploy-name="Doodle">
         <wb-resource deploy-path="/" source-path="/WebContent"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/tests"/>
         <property name="context-root" value="Doodle"/>
         <property name="java-output-path" value="/Doodle/build/classes"/>
     </wb-module>
