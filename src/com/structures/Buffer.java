@@ -94,14 +94,4 @@ public class Buffer {
 		return first.size() + second.size();
 	}
 	
-	
-	/*
-	 * 
-	 * A SIMPLE UNIT TEST CASE IMPLEMENTATION
-	 * 
-	 */
-	public static void main(String[] args) {
-	
-	}
-
 }

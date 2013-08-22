@@ -1,11 +1,12 @@
 package com;
 
-import com.structures.BufferTest;
+import com.structures.*;
 
 public class AcceptanceTester {
 
 	private static final Test[] tests = {
-		new BufferTest()
+		new BufferTest(),
+		new StackTest()
 		
 	};
 	
