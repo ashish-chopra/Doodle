@@ -21,6 +21,8 @@ public class StackTest implements Test {
 		stack.pop();
 		stack.pop();
 		assert (stack.pop().equals("little"));
+		assert (stack.peek().equals("over"));
+		assert (stack.peek().equals("over"));
 		assert (!stack.isEmpty());
 		assert (stack.size() == 5);
 	}
